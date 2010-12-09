@@ -1,4 +1,7 @@
 class Admin::ProductsController < ApplicationController
+
+  layout "admin"
+
   # GET /products
   # GET /products.xml
   def index
