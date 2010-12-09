@@ -1,11 +1,12 @@
 Nu::Application.routes.draw do
 
+  match 'admin' => 'admin#index'
+
   namespace :admin do 
     resources :products
-  end
-  
+  end  
   match 'products' => 'product#index'
-
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

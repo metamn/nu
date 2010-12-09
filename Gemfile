@@ -34,3 +34,4 @@ group :test do
   gem "shoulda"  
 end
 
+gem "simple-navigation"
