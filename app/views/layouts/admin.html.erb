@@ -11,7 +11,9 @@
     <%= render "admin/shared/header" %>
   </div>
   
-  <div id="content"
+  <div id="content">
+    <%= controller.controller_name %>
+    <%= render_navigation :level => 2 %>
     <%= yield %>
   </div>
 

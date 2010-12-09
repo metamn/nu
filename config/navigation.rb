@@ -40,12 +40,18 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.
     #
-    primary.item :dashboard, 'Dashboard', admin_path
+    primary.item :dashboard, 'Dashboard', admin_dashboard_path
 
     # Add an item which has a sub navigation (same params, but with block)
-    primary.item :products, 'Products', admin_products_path do |prod|
-      #prod.item :test, 'Test', new_admin_product_path
+    primary.item :store, 'Store', admin_store_path do |stor|
+      stor.item :products, 'Products', admin_products_path
+      stor.item :variations, 'Variations', admin_products_path
+      stor.item :collections, 'Collections', admin_products_path
     end
+    
+    primary.item :sales, "Sales", admin_store_path 
+    primary.item :marketing, "Marketing", admin_store_path
+    
 
     # You can also specify a condition-proc that needs to be fullfilled to display an item.
     # Conditions are part of the options. They are evaluated in the context of the views,
