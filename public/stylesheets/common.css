@@ -1,5 +1,40 @@
+#header #info {
+  background: #999;
+  color: white;
+  padding: 1em;
+}
+#header #menu {
+  background: #aaa;
+  padding: 1em 0 2em;
+}
+#content #menu {
+  background: #ddd;
+  color: white;
+  padding: 1em 0 2em;
+}
+
+#content {
+  padding-bottom: 2em;
+  border-bottom: 1px solid #ddd;
+}
+
+
+a {
+  color: #222;
+}
+a:visited {
+  color: #444;
+}
+
+
+.menu ul li.selected a {
+  text-decoration: none;
+  font-weight: bold;
+}
 .menu ul, .inline-list {
   display: block;
+  margin: 0;
+  padding: 0;
 }
 .menu ul li, .inline-list li {
   display: inline;
