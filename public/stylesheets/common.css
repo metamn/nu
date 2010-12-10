@@ -1,0 +1,16 @@
+.menu ul, .inline-list {
+  display: block;
+}
+.menu ul li, .inline-list li {
+  display: inline;
+  float: left;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowarp;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.clear {
+  clear: both;
+}

@@ -45,12 +45,7 @@ SimpleNavigation::Configuration.run do |navigation|
     # Add an item which has a sub navigation (same params, but with block)
     primary.item :store, 'Store', admin_store_path do |stor|
       stor.item :products, 'Products', admin_products_path
-      stor.item :variations, 'Variations', admin_products_path
-      stor.item :collections, 'Collections', admin_products_path
     end
-    
-    primary.item :sales, "Sales", admin_store_path 
-    primary.item :marketing, "Marketing", admin_store_path
     
 
     # You can also specify a condition-proc that needs to be fullfilled to display an item.
