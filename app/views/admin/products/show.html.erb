@@ -1,14 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<% @columns.each_with_index do |column, index| %>
 <p>
-  <b>Name:</b>
-  <%= @product.name %>
+  <b><%= @column_names[index] %></b>
+  <%= @product.send column %>
 </p>
-
-<p>
-  <b>Description:</b>
-  <%= @product.description %>
-</p>
+<% end %>
 
 
 <%= link_to 'Edit', edit_admin_product_path(@product) %> |

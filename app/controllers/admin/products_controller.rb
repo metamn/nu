@@ -1,7 +1,8 @@
 class Admin::ProductsController < ApplicationController
 
   layout "admin"
-
+  
+  
   # GET /products
   # GET /products.xml
   def index
@@ -24,6 +25,9 @@ class Admin::ProductsController < ApplicationController
   # GET /products/1.xml
   def show
     @product = Product.find(params[:id])
+    
+    @columns = Product.column_names
+    @column_names = @columns.map {|c| c.humanize}
 
     respond_to do |format|
       format.html # show.html.erb
@@ -35,7 +39,8 @@ class Admin::ProductsController < ApplicationController
   # GET /products/new.xml
   def new
     @product = Product.new
-
+    
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @product }
