@@ -7,4 +7,7 @@ class ProductTest < ActiveSupport::TestCase
   should ensure_length_of(:name).is_at_most(255)
   
   should_not allow_value(".").for(:description)
+  
+  should_not allow_value(".").for(:sku)
+  should ensure_length_of(:sku).is_at_most(255) 
 end

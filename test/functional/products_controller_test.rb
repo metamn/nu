@@ -1,49 +1,25 @@
 require 'test_helper'
 
-class ProductsControllerTest < ActionController::TestCase
-  setup do
-    @product = products(:one)
+class Admin::ProductsControllerTest < ActionController::TestCase
+  
+  context "Get index" do
+    setup { get :index }
+
+    should respond_with :success
+    should render_template :index
+    should_not set_the_flash
+  end
+  
+  context "Get controller variables" do
+    setup { get :index }
+    
+    should assign_to :products  
   end
 
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:products)
+  test "Should get product by /product/:id" do
+    assert_routing '/product/1', { :controller => "product", :action => "show", :id => "1" }
   end
-
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
-  test "should create product" do
-    assert_difference('Product.count') do
-      post :create, :product => @product.attributes
-    end
-
-    assert_redirected_to product_path(assigns(:product))
-  end
-
-  test "should show product" do
-    get :show, :id => @product.to_param
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get :edit, :id => @product.to_param
-    assert_response :success
-  end
-
-  test "should update product" do
-    put :update, :id => @product.to_param, :product => @product.attributes
-    assert_redirected_to product_path(assigns(:product))
-  end
-
-  test "should destroy product" do
-    assert_difference('Product.count', -1) do
-      delete :destroy, :id => @product.to_param
-    end
-
-    assert_redirected_to products_path
-  end
+  #TODO Put route testing outside resources/controllers
+    
 end
+

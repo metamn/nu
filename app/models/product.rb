@@ -6,4 +6,7 @@ class Product < ActiveRecord::Base
   
   #TODO Regexp for title, html validations
   validates_format_of :description, :with => /\A[a-zA-Z]+\z/  
+  
+  validates_format_of :sku, :with => /\A[a-zA-Z]+\z/
+  validates_length_of :sku, :maximum => 255
 end

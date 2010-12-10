@@ -8,6 +8,13 @@ Nu::Application.routes.draw do
   match 'products' => 'product#index'
   match 'admin' => 'admin/dashboard#index'
   
+  
+  # Product short urls
+  match 'product/:id' => 'product#show'
+  match ':id' => 'product#show'
+  
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

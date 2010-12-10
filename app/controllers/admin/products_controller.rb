@@ -6,6 +6,13 @@ class Admin::ProductsController < ApplicationController
   # GET /products.xml
   def index
     @products = Product.all
+    
+    # get all columns
+    @columns = Product.column_names    
+    # remove unnecessary
+    @columns -= ["id", "created_at", "updated_at"]
+    # humanize column names for display
+    @column_names = @columns.map {|c| c.humanize}
 
     respond_to do |format|
       format.html # index.html.erb
