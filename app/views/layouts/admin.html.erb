@@ -11,11 +11,11 @@
     <%= render "admin/shared/header" %>
   </div>
   
-  <div id="content">
-    <div id="menu" class="menu">
-      <%= render_navigation :level => 2 %>
-    </div>
-    <br/>
+  <div id="navigation" class="menu">
+    <%= render_navigation :level => 2 %>
+  </div>
+  
+  <div id="content">    
     <%= yield %>
   </div>
 

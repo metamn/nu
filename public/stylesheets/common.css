@@ -1,13 +1,17 @@
+body {
+  font-size: 100%;
+}
+
 #header #info {
   background: #999;
   color: white;
-  padding: 1em;
+  padding: .1em;
 }
 #header #menu {
   background: #aaa;
   padding: 1em 0 2em;
 }
-#content #menu {
+#navigation {
   background: #ddd;
   color: white;
   padding: 1em 0 2em;
@@ -18,6 +22,19 @@
   border-bottom: 1px solid #ddd;
 }
 
+#content #header {
+  display: block;
+}
+#content #header .title, #content #header .operations {
+  float: left;  
+}
+
+
+
+.block {
+  clear: both;
+  width: 100%;
+}
 
 a {
   color: #222;
