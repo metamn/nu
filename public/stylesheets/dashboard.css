@@ -96,7 +96,9 @@ body.dashboard #navigation ul li {
 body.dashboard #content {
   margin: 0 1em;
 }
-
+body.dashboard #content #operations {
+  margin-bottom: .5em;
+}
 body.dashboard #content #column-names {
   border-bottom: 1px solid #C6C6C6;
   background: -moz-linear-gradient(center bottom , #D7D7D7, #E4E4E4) repeat scroll 0 0 transparent;
@@ -114,6 +116,10 @@ body.dashboard #content .items {
 body.dashboard #content .even {
   background: #fff;
 }
+body.dashboard #content .crud {
+  font-size: smaller;
+  padding: .5em 0 0 
+}
 
 /* Products */
 body.dashboard #content #products .name {
@@ -123,8 +129,38 @@ body.dashboard #content #products .description {
   width: 20%;
 }
 body.dashboard #content #products .sku, body.dashboard #content #products .stock, body.dashboard #content #products .price {
-  width: 10%;
+  width: 16.6%;
 }
+
+
+/* Errors
+*/
+
+
+.field_with_errors {
+  padding: .25em;
+  background-color: #d54e21;
+  color: white;
+  display: table;
+}
+
+#error_explanation {  
+  border: 2px solid #d54e21;
+  padding-bottom: 0;  
+  margin-bottom: 2em;
+  width: 50%;
+}
+
+#error_explanation h2 {  
+  color: #fff;
+  background-color: #d54e21;
+}
+
+#error_explanation ul li {
+  list-style: square;
+  padding: 1em 0;
+}
+
 
 
 

@@ -6,30 +6,41 @@
   <%= link_to 'Add new', new_admin_product_path %>  
 </div>
 
-<%= content_tag :div, :id => @klass, :class => "block" do %>
-  <div id="column-names" class="block">
-    <div class="items">
-      <% @column_names.each_with_index do |column, index| %>
-        <%= content_tag :div, column, :class => "item #{@columns[index]}" %>
-      <% end %>
-      <div class="item crud"> &nbsp; </div>
+<% if @products.size > 0 %>
+
+  <%= content_tag :div, :id => @klass, :class => "block" do %>
+    <div id="column-names" class="block">
+      <div class="items">
+        <% @column_names.each_with_index do |column, index| %>
+          <%= content_tag :div, column, :class => "item #{@columns[index]}" %>
+        <% end %>
+        <div class="item crud"> &nbsp; </div>
+      </div>
     </div>
-  </div>
 
-  <div id="columns" class="block">
-    <% @products.each do |product| %>
-      <%= content_tag :div, :class => "items #{cycle('even', 'odd')}" do %>      
-        <% @columns.each do |column| %>
-          <%= content_tag :div, scaffold_content_tag(product.send(column)), :class => "item #{column}" %>
-        <% end %>    
-        <div class="item crud">
-          <%= link_to 'Show', [:admin, product] %>
-          <%= link_to 'Edit', edit_admin_product_path(product) %>
-          <%= link_to 'Destroy', [:admin, product], :confirm => 'Are you sure?', :method => :delete %>
-        </div>
+    <div id="columns" class="block">
+      <% @products.each do |product| %>
+        <%= content_tag :div, :class => "items #{cycle('even', 'odd')}" do %>      
+          <% @columns.each do |column| %>
+            <%= content_tag :div, scaffold_content_tag(product.send(column)), :class => "item #{column}" %>
+          <% end %>    
+          <div class="item crud">
+            <ul class="inline-list">
+              <li><%= link_to 'Show', [:admin, product] %></li>              
+              <li><%= link_to 'Edit', edit_admin_product_path(product) %></li>
+              <li><%= link_to 'Destroy', [:admin, product], :confirm => 'Are you sure?', :method => :delete %></li>
+            </ul>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
-<% end %>
+    </div>
+  <% end %>
 
+<% else %>
+
+  <div class="notice">
+    <h4>There are no items added. Try adding one</h4>
+  </div>  
+
+<% end %>
 

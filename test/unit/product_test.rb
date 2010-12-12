@@ -8,6 +8,10 @@ class ProductTest < ActiveSupport::TestCase
   
   should_not allow_value(".").for(:description)
   
+  should validate_uniqueness_of(:sku)
   should_not allow_value(".").for(:sku)
   should ensure_length_of(:sku).is_at_most(255) 
+  
+  should validate_numericality_of(:price)
+  should validate_numericality_of(:stock)
 end

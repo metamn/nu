@@ -4,26 +4,27 @@
 }
 .item {
   float: left;
+  word-wrap: break-word;
 }
 .block {
   clear: both;
   width: 100%;
 }
-.inline-list {
+ol.inline-list, ul.inline-list {
   display: block;
   margin: 0;
   padding: 0;
 }
-.inline-list li {
+ol.inline-list li, ul.inline-list li {
   display: inline;
   float: left;
   list-style-type: none;
   margin-left: 0;
-  white-space: nowarp;
-  padding-left: 4px;
+  white-space: nowarp;  
   padding-right: 4px;
 }
-
 .clear {
   clear: both;
 }
+
+
