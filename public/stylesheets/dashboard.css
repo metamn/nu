@@ -1,0 +1,94 @@
+/* Colors
+---------
+
+background: f9f9f9
+  header: D7D7D7
+  navigation: f1f1f1
+  color: #333;
+  border, dark: #C6C6C6
+  border, light: E3E3E3
+
+link: #21759B
+  hover: d54e21;
+*/
+
+
+
+
+
+body.dashboard {
+  background: #f9f9f9;
+  color: #333;  
+}
+body.dashboard a, body.dashboard a:visited {
+  color: #21759B;
+}
+body.dashboard a:hover, body.dashboard a:active, body.dashboard a:focus {
+  color: #d54e21;
+}
+
+
+/* Header
+*/
+
+
+body.dashboard #header {
+  border-bottom: 1px solid #C6C6C6;
+  background: -moz-linear-gradient(center bottom , #D7D7D7, #E4E4E4) repeat scroll 0 0 transparent;
+  padding: 1em 0;
+}
+
+
+/* Navigation
+*/
+
+body.dashboard #navigation {  
+}
+body.dashboard #navigation #level-1 ul {
+  background: #e9e9e9;
+  padding: 1em 0;
+  height: 1.4em;
+}
+body.dashboard #navigation #level-1 ul li {
+  border: 1px solid #ccc;
+  padding: .5em;
+  margin-right: .25em;
+}
+body.dashboard #navigation #level-1 ul li.selected {
+  border-bottom: 2px solid #f1f1f1;
+  background: #f1f1f1;
+}
+body.dashboard #navigation #level-2 ul {
+  background: #f1f1f1;
+  padding: 1em 0;
+  height: 1.4em;
+}
+body.dashboard #navigation #level-2 ul li {  
+  padding: .5em;
+  margin-right: .25em;
+}
+body.dashboard #navigation #level-2 ul li.selected {
+  border-bottom: 4px solid #f9f9f9;
+  background: #f9f9f9;
+}
+
+body.dashboard #navigation ul li a, body.dashboard #navigation ul li a:visited, body.dashboard #navigation ul li a:hover,
+body.dashboard #navigation ul li a:active, body.dashboard #navigation ul li a:focus {
+  text-decoration: none;
+}
+
+body.dashboard #navigation ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+body.dashboard #navigation ul li {
+  display: inline;
+  float: left;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowarp;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+

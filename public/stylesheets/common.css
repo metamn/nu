@@ -1,59 +1,14 @@
-body {
-  font-size: 100%;
-}
-
-#header #info {
-  background: #999;
-  color: white;
-  padding: .1em;
-}
-#header #menu {
-  background: #aaa;
-  padding: 1em 0 2em;
-}
-#navigation {
-  background: #ddd;
-  color: white;
-  padding: 1em 0 2em;
-}
-
-#content {
-  padding-bottom: 2em;
-  border-bottom: 1px solid #ddd;
-}
-
-#content #header {
-  display: block;
-}
-#content #header .title, #content #header .operations {
-  float: left;  
-}
-
-
 
 .block {
   clear: both;
   width: 100%;
 }
-
-a {
-  color: #222;
-}
-a:visited {
-  color: #444;
-}
-
-
-.menu ul li.selected a {
-  text-decoration: none;
-  font-weight: bold;
-}
-.menu ul, .inline-list {
+.inline-list {
   display: block;
   margin: 0;
   padding: 0;
 }
-.menu ul li, .inline-list li {
+.inline-list li {
   display: inline;
   float: left;
   list-style-type: none;

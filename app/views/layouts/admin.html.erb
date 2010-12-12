@@ -6,20 +6,25 @@
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body>
-  <div id="header">
+<body class="dashboard">
+  <div id="header" class="block">
     <%= render "admin/shared/header" %>
   </div>
   
-  <div id="navigation" class="menu">
-    <%= render_navigation :level => 2 %>
+  <div id="navigation" class="block">
+    <div id="level-1" class="block">
+      <%= render_navigation :level => 1 %>
+    </div>
+    <div id="level-2" class="block">
+      <%= render_navigation :level => 2 %>
+    </div>
   </div>
   
-  <div id="content">    
+  <div id="content" class="block">    
     <%= yield %>
   </div>
 
-  <div id="footer">
+  <div id="footer" class="block">
     <%= render "admin/shared/footer" %>
   </div>
 

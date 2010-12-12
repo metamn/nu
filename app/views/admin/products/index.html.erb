@@ -1,13 +1,13 @@
-<div id="header" class="block">
-  <div class="title">  
+<div class="block">
+  <div class="title" class="block">  
     <h3>Listing products</h3>
   </div>
-  <div class="operations">  
+  <div class="operations" class="block">  
     <%= link_to 'New Product', new_admin_product_path %>  
   </div>  
 </div>
 
-<div class="items block"
+<div class="items block">
 <table>
   <tr>
   <% @column_names.each do |column| %>

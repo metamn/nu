@@ -40,7 +40,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.
     #
-    primary.item :dashboard, 'Dashboard', admin_dashboard_path
+    primary.item :dashboard, 'Home', admin_dashboard_path
 
     # Add an item which has a sub navigation (same params, but with block)
     primary.item :store, 'Store', admin_store_path do |stor|
