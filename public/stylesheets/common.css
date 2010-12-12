@@ -1,4 +1,10 @@
-
+.items {
+  width: 100%;
+  display: inline-block;
+}
+.item {
+  float: left;
+}
 .block {
   clear: both;
   width: 100%;

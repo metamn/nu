@@ -46,26 +46,17 @@ body.dashboard #navigation {
 }
 body.dashboard #navigation #level-1 ul {
   background: #e9e9e9;
-  padding: 1em 0;
-  height: 1.4em;
 }
 body.dashboard #navigation #level-1 ul li {
   border: 1px solid #ccc;
-  padding: .5em;
-  margin-right: .25em;
+  border-bottom: 1px solid #f1f1f1;  
 }
 body.dashboard #navigation #level-1 ul li.selected {
   border-bottom: 2px solid #f1f1f1;
   background: #f1f1f1;
 }
 body.dashboard #navigation #level-2 ul {
-  background: #f1f1f1;
-  padding: 1em 0;
-  height: 1.4em;
-}
-body.dashboard #navigation #level-2 ul li {  
-  padding: .5em;
-  margin-right: .25em;
+  background: #f1f1f1;  
 }
 body.dashboard #navigation #level-2 ul li.selected {
   border-bottom: 4px solid #f9f9f9;
@@ -81,6 +72,8 @@ body.dashboard #navigation ul {
   display: block;
   margin: 0;
   padding: 0;
+  padding: .5em 0;
+  height: 1.9em;
 }
 body.dashboard #navigation ul li {
   display: inline;
@@ -88,7 +81,51 @@ body.dashboard #navigation ul li {
   list-style-type: none;
   margin-left: 0;
   white-space: nowarp;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding: .5em 1em;
+  margin-right: .25em;
+  -moz-border-radius-topleft: 6px;
+  -moz-border-radius-topright: 6px;
 }
+
+
+
+
+/* Content
+*/
+
+body.dashboard #content {
+  margin: 0 1em;
+}
+
+body.dashboard #content #column-names {
+  border-bottom: 1px solid #C6C6C6;
+  background: -moz-linear-gradient(center bottom , #D7D7D7, #E4E4E4) repeat scroll 0 0 transparent;
+}
+body.dashboard #content #column-names .items .item {
+  font-weight: bold;
+}
+body.dashboard #content #column-names .items {
+  border-bottom: none;
+}
+body.dashboard #content .items {
+  padding: .5em 0;
+  border-bottom: 1px solid #eee;
+}
+body.dashboard #content .even {
+  background: #fff;
+}
+
+/* Products */
+body.dashboard #content #products .name {
+  width: 30%;
+}
+body.dashboard #content #products .description {
+  width: 20%;
+}
+body.dashboard #content #products .sku, body.dashboard #content #products .stock, body.dashboard #content #products .price {
+  width: 10%;
+}
+
+
+
 

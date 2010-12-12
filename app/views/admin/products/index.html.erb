@@ -1,34 +1,35 @@
-<div class="block">
-  <div class="title" class="block">  
-    <h3>Listing products</h3>
+<div id="title" class="block">
+  <h2><%= @title %></h2>    
+</div>
+
+<div id="operations" class="block">  
+  <%= link_to 'Add new', new_admin_product_path %>  
+</div>
+
+<%= content_tag :div, :id => @klass, :class => "block" do %>
+  <div id="column-names" class="block">
+    <div class="items">
+      <% @column_names.each_with_index do |column, index| %>
+        <%= content_tag :div, column, :class => "item #{@columns[index]}" %>
+      <% end %>
+      <div class="item crud"> &nbsp; </div>
+    </div>
   </div>
-  <div class="operations" class="block">  
-    <%= link_to 'New Product', new_admin_product_path %>  
-  </div>  
-</div>
 
-<div class="items block">
-<table>
-  <tr>
-  <% @column_names.each do |column| %>
-    <th><%= column %></th>    
-  <% end %>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @products.each do |product| %>
-  <tr>
-    <% @columns.each do |column| %>
-      <td><%= product.send column %></td>    
+  <div id="columns" class="block">
+    <% @products.each do |product| %>
+      <%= content_tag :div, :class => "items #{cycle('even', 'odd')}" do %>      
+        <% @columns.each do |column| %>
+          <%= content_tag :div, scaffold_content_tag(product.send(column)), :class => "item #{column}" %>
+        <% end %>    
+        <div class="item crud">
+          <%= link_to 'Show', [:admin, product] %>
+          <%= link_to 'Edit', edit_admin_product_path(product) %>
+          <%= link_to 'Destroy', [:admin, product], :confirm => 'Are you sure?', :method => :delete %>
+        </div>
+      <% end %>
     <% end %>
-    <td><%= link_to 'Show', [:admin, product] %></td>
-    <td><%= link_to 'Edit', edit_admin_product_path(product) %></td>
-    <td><%= link_to 'Destroy', [:admin, product], :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  </div>
 <% end %>
-</table>
-</div>
 
 

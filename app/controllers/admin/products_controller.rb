@@ -8,6 +8,9 @@ class Admin::ProductsController < ApplicationController
   def index
     @products = Product.all
     
+    @title = controller_name.humanize
+    @klass = controller_name
+    
     # get all columns
     @columns = Product.column_names    
     # remove unnecessary
