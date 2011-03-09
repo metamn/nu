@@ -45,6 +45,7 @@ SimpleNavigation::Configuration.run do |navigation|
     # Add an item which has a sub navigation (same params, but with block)
     primary.item :store, 'Store', admin_store_path do |stor|
       stor.item :products, 'Products', admin_products_path
+      stor.item :collections, 'Collections', admin_collections_path
     end
     
 

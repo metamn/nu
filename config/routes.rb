@@ -1,7 +1,7 @@
 Nu::Application.routes.draw do
 
   namespace :admin do 
-    resources :products
+    resources :products, :collections
     match 'dashboard' => 'dashboard#index'
     match 'store' => 'store#index'
   end  

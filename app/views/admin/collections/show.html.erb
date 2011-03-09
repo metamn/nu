@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<% @columns.each_with_index do |column, index| %>
+<p>
+  <b><%= @column_names[index] %></b>
+  <%= @collection.send column %>
+</p>
+<% end %>
+
+
+<%= link_to 'Edit', edit_admin_collection_path(@collection) %> |
+<%= link_to 'Back', admin_collections_path %>

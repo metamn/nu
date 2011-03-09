@@ -122,14 +122,18 @@ body.dashboard #content .crud {
   padding: .5em 0 0 
 }
 
-/* Products */
-body.dashboard #content #products .name {
+/* Sizing the Resource columns */
+body.dashboard .items .name, 
+body.dashboard .items .details,
+body.dashboard .items .rules {
   width: 30%;
 }
-body.dashboard #content #products .description {
+body.dashboard .items .description {
   width: 20%;
 }
-body.dashboard #content #products .sku, body.dashboard #content #products .stock, body.dashboard #content #products .price {
+body.dashboard .items .sku, 
+body.dashboard .items .stock, 
+body.dashboard .items .price {
   width: 16.6%;
 }
 
