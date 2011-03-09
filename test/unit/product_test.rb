@@ -14,4 +14,25 @@ class ProductTest < ActiveSupport::TestCase
   
   should validate_numericality_of(:price)
   should validate_numericality_of(:stock)
+  
+  test "should retrieve tags" do
+    p = Product.first
+    assert_not_nil p.tags, "must have tags"
+  end
+  
+  test "should retrieve tags even when empty" do
+    p = Product.last
+    assert_equal p.tags, [], "tags must be []"
+  end
+  
+  test "should retrieve categories" do
+    p = Product.first
+    assert_not_nil p.categories, "must have tags"
+  end
+  
+  test "should retrieve categories even when empty" do
+    p = Product.last
+    assert_equal p.categories, [], "tags must be []"
+  end
+    
 end

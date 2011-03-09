@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110309164939) do
+ActiveRecord::Schema.define(:version => 20110309170029) do
 
   create_table "products", :force => true do |t|
     t.string   "name"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20110309164939) do
     t.string   "sku"
     t.integer  "stock"
     t.decimal  "price"
-    t.text     "detail"
+    t.text     "details"
   end
 
 end

@@ -14,7 +14,7 @@ class Admin::ProductsController < ApplicationController
     # get all columns
     @columns = Product.column_names    
     # remove unnecessary
-    @columns -= ["id", "created_at", "updated_at"]
+    @columns -= ["id", "created_at", "updated_at", "description", "sku"]
     # humanize column names for display
     @column_names = @columns.map {|c| c.humanize}
 

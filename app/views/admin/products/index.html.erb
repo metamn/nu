@@ -24,7 +24,7 @@
           <% @columns.each do |column| %>
             <%= content_tag :div, scaffold_content_tag(product.send(column)), :class => "item #{column}" %>
           <% end %>    
-          <div class="item crud">
+          <div class="item crud block">
             <ul class="inline-list">
               <li><%= link_to 'Show', [:admin, product] %></li>              
               <li><%= link_to 'Edit', edit_admin_product_path(product) %></li>
