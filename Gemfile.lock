@@ -33,6 +33,7 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     i18n (0.4.2)
+    liquid (2.2.2)
     mail (2.2.10)
       activesupport (>= 2.3.6)
       i18n (~> 0.4.1)
@@ -72,6 +73,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  liquid
   rails (= 3.0.3)
   shoulda
   simple-navigation

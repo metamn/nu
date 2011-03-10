@@ -31,7 +31,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # end
 
 group :test do
-  gem "shoulda"  
+  gem 'shoulda'  
 end
 
-gem "simple-navigation"
+gem 'simple-navigation'
+gem 'liquid'

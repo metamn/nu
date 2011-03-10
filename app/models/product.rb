@@ -6,6 +6,11 @@ class Product < ActiveRecord::Base
   validates_numericality_of :stock, :price  
   
   
+  # attributes available on frontend / liquid
+  liquid_methods :name
+
+  
+  
   # Returns an array of tags, as strings
   def tags 
     yaml("tags")
@@ -29,3 +34,5 @@ class Product < ActiveRecord::Base
     meta[key]
   end
 end
+
+

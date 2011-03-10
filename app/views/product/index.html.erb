@@ -6,3 +6,9 @@
   <br/>
 <% end %>
 
+<br/>
+And now with liquid:
+<br/>
+<%= Liquid::Template.parse("{% for product in products %}{{ product.name }}{% endfor %}").render('products' => @products) %>
+
+
