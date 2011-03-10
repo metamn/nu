@@ -5,12 +5,7 @@ class Product < ActiveRecord::Base
   validates_length_of :name, :sku, :maximum => 255
   validates_numericality_of :stock, :price  
   
-  
-  # attributes available on frontend / liquid
-  liquid_methods :name
-
-  
-  
+   
   # Returns an array of tags, as strings
   def tags 
     yaml("tags")

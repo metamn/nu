@@ -35,4 +35,3 @@ group :test do
 end
 
 gem 'simple-navigation'
-gem 'liquid'
